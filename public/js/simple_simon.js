@@ -1,8 +1,6 @@
 'use strict';
 console.log('Welcome to Simple Simon');
 
-//activate start button
-
 //color 'blink'
 $('.color').click(function(event){
     var squareClicked = $(this);
@@ -31,3 +29,8 @@ function getRandomSquare(){
 //iterate animate each square in Simon's sequence
 
 //if user input is equal to Simon's sequence, continue playing; NOT equal to Simon's sequence, game over
+
+//activate start button
+$('#start').click(function(){
+    startSimonGame();
+})
