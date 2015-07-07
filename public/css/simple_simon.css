@@ -16,13 +16,14 @@ body {
 }
 
 button {
-	border: 2px solid #000;
+	border: 2px solid #fff;
 	border-radius: 20px;
 	margin: 20px;
 	width: 360px;
 	height: 50px;
 	outline: none;
-	background-color: #fff;
+	background-color: #000;
+	color: #fff;
 	font-size: 36px;
 }
 
@@ -40,7 +41,7 @@ button {
 	height: 175px;
 	float: left;
 	outline: none;
-	opacity: .75;
+	opacity: .5;
 }
 
 .active {
