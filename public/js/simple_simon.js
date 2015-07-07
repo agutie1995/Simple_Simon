@@ -15,10 +15,11 @@ $('.color').click(function(event){
         if (userIndex == simonSequence.length){
         newRound();
         userIndex = 0;
-        } else {
-            alert('YOU LOSE!')
-        }
-    };
+        }   
+    } else {
+            alert('YOU LOSE!');
+            console.log('YOU LOSE!');
+    }
 });
 
 
@@ -40,7 +41,6 @@ function getRandomColor(){
     var randomColor =  Math.floor(Math.random() * 4);
     var buttonToAnimate = colors[randomColor];
     var id = buttonToAnimate.getAttribute('id');
-    //return animateColor(id);
     simonSequence.push(id);
     console.log(simonSequence);
 };
