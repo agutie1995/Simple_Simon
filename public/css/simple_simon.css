@@ -25,12 +25,25 @@ button {
 	background-color: #000;
 	color: #fff;
 	font-size: 36px;
+	text-align: center;
 }
 
 #buttons {
 	width: 400px;
 	height: 400px;
 	margin: auto;
+}
+
+#roundNumber {
+	width: 360px;
+	height: 50px;
+	margin: 10px 448px;
+	border: 2px solid #fff;
+	border-radius: 20px;
+	background-color: #000;
+	color: #fff;
+	font-size: 36px;
+	text-align: center;
 }
 
 .color {
@@ -50,16 +63,20 @@ button {
 
 #red {
 	background-color: #f00;
+
 }
 
 #blue {
 	background-color: #00f;
+
 }
 
 #green {
 	background-color: #0f0;
+
 }
 
 #yellow {
 	background-color: #ff0;
+
 }

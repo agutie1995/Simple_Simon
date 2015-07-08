@@ -8,7 +8,6 @@ var userIndex = 0;
 $('.color').click(function(event){
     var idOfColorClicked = $(this).attr('id');
     animateColor(idOfColorClicked);
-    //console.log(idOfColorClicked);
 //if user input is equal to Simon's sequence, continue to next round; NOT equal to Simon's sequence, game over
     if (idOfColorClicked == simonSequence[userIndex]){
         userIndex++;
@@ -19,6 +18,7 @@ $('.color').click(function(event){
     } else {
             alert('YOU LOSE!');
             console.log('YOU LOSE!');
+            location.reload(true);
     }
 });
 
@@ -49,6 +49,7 @@ function getRandomColor(){
 function newRound(){
     playSimonSequence();
     getRandomColor();
+    $('#roundNumber').val('Round ' + simonSequence.length);
 };
 
 //remember and add to sequence
