@@ -4,28 +4,15 @@ console.log('Welcome to Simple Simon');
 var simonSequence = [];
 var userIndex = 0;
 
-
-$('.color').click(function(event){
-    var idOfColorClicked = $(this).attr('id');
-    animateColor(idOfColorClicked);
-//if user input is equal to Simon's sequence, continue to next round; NOT equal to Simon's sequence, game over
-    if (idOfColorClicked == simonSequence[userIndex]){
-        userIndex++;
-        if (userIndex == simonSequence.length){
-        newRound();
-        userIndex = 0;
-        }   
-    } else {
-            alert('YOU LOSE!');
-            console.log('YOU LOSE!');
-            location.reload(true);
-    }
+//activate start button
+$('#start').click(function(){
+    console.log('Let\'s play!');
+    simonSequence =[];
+    newRound();
 });
-
 
 //color blink when clicked
     //color blink when user clicks
-
 function animateColor(id){
     $('#' + id).addClass('active');
     setTimeout(function(){
@@ -33,9 +20,7 @@ function animateColor(id){
     }, 750);
 };
 
-
 //generate random color between 0 and 3 from Simon
-
 function getRandomColor(){
     var colors = $('.color');
     var randomColor =  Math.floor(Math.random() * 4);
@@ -53,7 +38,6 @@ function newRound(){
 };
 
 //iterate each square in Simon's sequence
-
 function playSimonSequence(){
     var i = 0;
     var intervalId = setInterval(function(){
@@ -70,10 +54,19 @@ $('.color').click(function(event){
     console.log(colorClicked);
 });
 
-//activate start button
-
-$('#start').click(function(){
-    console.log('Let\'s play!');
-    simonSequence =[];
-    newRound();
+//if user input is equal to Simon's sequence, continue to next round; NOT equal to Simon's sequence, game over
+$('.color').click(function(event){
+    var idOfColorClicked = $(this).attr('id');
+    animateColor(idOfColorClicked);
+    if (idOfColorClicked == simonSequence[userIndex]){
+        userIndex++;
+        if (userIndex == simonSequence.length){
+        newRound();
+        userIndex = 0;
+        }   
+    } else {
+            alert('GAME OVER!');
+            console.log('GAME OVER!');
+            location.reload(true);
+    }
 });
