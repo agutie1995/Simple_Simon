@@ -52,7 +52,6 @@ function newRound(){
     $('#roundNumber').val('Round ' + simonSequence.length);
 };
 
-//remember and add to sequence
 //iterate each square in Simon's sequence
 
 function playSimonSequence(){
