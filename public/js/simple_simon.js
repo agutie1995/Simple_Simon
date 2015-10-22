@@ -9,6 +9,7 @@ $('#start').click(function(){
     console.log('Let\'s play!');
     simonSequence =[];
     newRound();
+    $(this).prop('disabled', true)
 });
 
 //color blink when clicked
